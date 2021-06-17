@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF7FF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+
+        <ImageView
+            android:id="@+id/back_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:elevation="2dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/corners14"
+            android:src="@drawable/ic_arrow___left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/back_relative"
+            android:text="Сообщения"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+    </RelativeLayout>
+
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/cornerstoolbar"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingStart="24dp"
+            android:layout_gravity="center"
+            android:elevation="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginStart="53dp"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:textColorHint="#656565"
+                android:textSize="15sp"
+                android:background="@null"
+                android:layout_weight="10"
+                android:layout_gravity="start|center"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:layout_marginEnd="18dp"
+                android:layout_gravity="end|center"/>
+
+        </LinearLayout>
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_chatbig"
+              android:layout_alignParentRight="true"/>
+
+      </RelativeLayout>
+
+     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/cornerschats">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:layout_marginTop="16dp"
+             android:paddingStart="40dp"
+             android:paddingEnd="40dp"
+             android:gravity="center"
+             android:padding="4dp">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:background="@drawable/cornersmessages"
+             android:paddingStart="8dp"
+             android:paddingBottom="8dp"
+             android:paddingTop="8dp"
+             android:paddingEnd="24dp"
+             android:elevation="4dp"
+             android:layout_margin="4dp">
+
+         <ImageView
+             android:id="@+id/katysha"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/katya"
+             android:fontFamily="@font/montserrat_semibold"/>
+
+             <TextView
+                 android:id="@+id/nick"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="8dp"
+                 android:layout_toRightOf="@id/katysha"
+                 android:text="katya"
+                 android:textColor="@color/black"
+                 android:fontFamily="@font/montserrat_semibold"/>
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="8dp"
+                 android:layout_toRightOf="@id/katysha"
+                 android:layout_below="@id/nick"
+                 android:layout_marginTop="2dp"
+                 android:textSize="12dp"
+                 android:text="Гулять пойдешь?"
+                 android:textColor="#4f4f4f"
+                 android:fontFamily="@font/montserrat_semibold"/>
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentBottom="true"
+                 android:layout_marginTop="2dp"
+                 android:textSize="10dp"
+                 android:text="18:50"
+                 android:textColor="#4f4f4f"
+                 android:fontFamily="@font/montserrat_semibold"/>
+
+             <RelativeLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_alignParentEnd="true"
+                 android:layout_margin="3dp"
+                 style="@style/shadow">
+                 <View
+                     android:layout_width="14dp"
+                     android:layout_height="14dp"
+                     android:background="@drawable/corners1"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/montserrat_semibold"
+                     android:layout_centerInParent="true"
+                     android:text="2"
+                     android:textColor="@color/white"
+                     android:textSize="9dp" />
+
+
+             </RelativeLayout>
+
+
+         </RelativeLayout>
+         </RelativeLayout>
+
+     </ScrollView>
+
+</LinearLayout>
