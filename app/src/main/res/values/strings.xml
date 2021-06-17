@@ -4,6 +4,15 @@
     <string name="hellosteve">Привет, я Стив</string>
     <string name="belarus">from Belarus with love)</string>
     <string name="startregtext">Начнем регистрацию!</string>
+    <string name="go1">Шаг 1</string>
+    <string name="whriteyournick">Введи свой ник</string>
+    <string name="go2">Шаг 2</string>
+    <string name="writephone">Укажи свой номер телефона</string>
+    <string name="go3">Шаг 3</string>
+    <string name="writepassword">Придумай пароль</string>
+    <string name="meetearly">Мы уже знакомы?</string>
+    <string name="phone">Номер</string>
+    <string name="password">Пароль</string>
 
     <string name="title_home">Home</string>
     <string name="title_news">News</string>
@@ -23,7 +32,6 @@
     <string name="enter">ВОЙТИ</string>
     <string name="nickname">Имя пользователя</string>
     <string name="email">Введите почту</string>
-    <string name="password">Введите пароль</string>
     <string name="pub">Публикации</string>
     <string name="zitats">Цитаты</string>
     <string name="search">Поиск</string>

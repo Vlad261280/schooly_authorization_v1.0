@@ -13,13 +13,13 @@ import com.egormoroz.schooly.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class RegisrtationstartFragment extends Fragment {
-    public static RegisrtationstartFragment newInstance(){return new RegisrtationstartFragment();}
+public class RegFragment extends Fragment {
+    public static RegFragment newInstance(){return new RegFragment();}
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_reg, container, false);
+        View root = inflater.inflate(R.layout.fragment_registration, container, false);
         BottomNavigationView bnv = getActivity().findViewById(R.id.bottomNavigationView);
         bnv.setVisibility(bnv.GONE);
         AppBarLayout abl = getActivity().findViewById(R.id.AppBarLayout);

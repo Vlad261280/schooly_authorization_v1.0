@@ -33,10 +33,10 @@
         android:textColor="@color/app_color"
         android:textSize="12sp"
         android:layout_marginTop="42dp"
-        android:layout_toLeftOf="@id/steve"
-        android:layout_marginEnd="-60dp"/>
+        android:layout_marginStart="56dp"/>
 
     <TextView
+        android:id="@+id/longtextreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="8sp"
@@ -44,8 +44,7 @@
         android:fontFamily="@font/montserratblack"
         android:layout_below="@+id/helloostev"
         android:text="твой виртуальный помощник \nSchooly. Чтобы начать работу с\nприложением нужно пройти\nнесколько простых шагов.\nПриступим!"
-        android:layout_toLeftOf="@id/steve"
-        android:layout_marginEnd="-101dp"/>
+        android:layout_marginStart="56dp"/>
 
 
     <ImageView
@@ -53,8 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/steve"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="-50dp"/>
+        android:layout_toRightOf="@+id/longtextreg"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="-80dp"/>
 
     <TextView
      android:id="@+id/regtext"
