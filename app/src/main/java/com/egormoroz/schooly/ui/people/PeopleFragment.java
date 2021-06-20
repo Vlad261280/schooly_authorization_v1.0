@@ -12,13 +12,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.egormoroz.schooly.R;
-import com.google.android.material.appbar.AppBarLayout;
 
 public class PeopleFragment extends Fragment {
 
-    private PeopleViewModel peopleViewModel;
 
     public static PeopleFragment newInstance() {
         return new PeopleFragment();
@@ -27,16 +27,6 @@ public class PeopleFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_people, container, false);
-        AppBarLayout abl=getActivity().findViewById(R.id.AppBarLayout);
-        abl.setVisibility(abl.VISIBLE);
-        return root;
+        return inflater.inflate(R.layout.fragment_people, container, false);
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        peopleViewModel = new ViewModelProvider(this).get(PeopleViewModel.class);
-    }
-
 }

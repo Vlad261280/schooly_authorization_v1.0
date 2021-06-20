@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_200">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+        android:id="@+id/back_tosettingssupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:elevation="2dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/corners14"
+        android:src="@drawable/ic_arrow___left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/back_tosettingssupport"
+            android:text="Настройки"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/support"
+            android:textSize="18sp"
+            android:textColor="#656565"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners30dpwhite"
+                android:elevation="4dp"
+                android:layout_margin="4dp">
+
+                <EditText
+                    android:id="@+id/aboutproblem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Сообщить"
+                    android:textColorHint="@color/purple_300"
+                    android:backgroundTint="@color/purple_300"
+                    android:textSize="14sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="start|center"
+                    android:fontFamily="@font/montserrat_semibold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/soobchi"
+                    android:lines="2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_below="@id/aboutproblem"
+                    android:textSize="14sp"
+                    android:textColor="@color/greytext"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/montserrat_semibold"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

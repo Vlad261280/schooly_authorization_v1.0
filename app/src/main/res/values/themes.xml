@@ -18,4 +18,20 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <style name="CustomFABColor" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/purple_300</item>
+        <item name="tint">@color/white</item>
+    </style>
+    <style name="CustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="textAllCaps">false</item>
+       <item name="background">@color/purple_300</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+    <style name="shadow">
+        <item name="android:elevation">3dp</item>
+        <item name="android:shadowColor">@color/purple_300</item>
+
+    </style>
+
 </resources>

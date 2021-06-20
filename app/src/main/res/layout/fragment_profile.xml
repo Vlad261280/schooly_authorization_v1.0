@@ -7,52 +7,52 @@
     tools:context=".MainActivity"
     android:background="@color/purple_200">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <View
-            android:id="@+id/rectangle_1"
-            android:layout_width="0dp"
-            android:layout_height="272dp"
-            android:background="@drawable/corners8"
-            android:layout_marginTop="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="312dp">
 
+            <View
+                android:id="@+id/rectangle_1"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:gravity="bottom|center_horizontal"
+                android:background="@drawable/corners8" />
 
-        <LinearLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/corners"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button"
+                style="@style/CustomFABColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_______"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/rectangle_1"
+                android:layout_marginTop="-28dp"/>
 
-          <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_setting"
-              android:layout_marginTop="4dp"
-              android:layout_marginStart="4dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_setting"
+                android:gravity="center"
+                android:padding="4dp"
+                android:background="@drawable/corners"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"/>
 
-
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/subscribers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rectangle_1">
+            android:layout_marginTop="12dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                     android:gravity="center"
                     android:text="Публикации"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -141,70 +141,48 @@
 
         </LinearLayout>
 
-<!--        <View-->
-<!--            android:layout_width="328dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginTop="444dp"-->
-<!--            android:background="@drawable/corners10"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="84dp"-->
-<!--            android:layout_marginTop="450dp"-->
-<!--            android:text="Оформить подписку"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:gravity="center_horizontal|center_vertical"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            />-->
-
-
-
-
-            <View
-                android:id="@+id/publicationsbar"
-            android:layout_width="0dp"
-            android:layout_height="250dp"
-            android:background="@drawable/corners9"
-                android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/subscribers"
-            />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/publicationsbar">
+            android:layout_height="250dp"
+            android:background="@drawable/corners9"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="24dp">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/cornerstablayout"
+                android:padding="4dp">
 
-            <View
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@drawable/cornersplus"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/pub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/pub"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/corners30dp"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/quote"
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center"
+                    android:text="@string/zitats"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/corners30dpwhite"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="19dp"
-            android:src="@drawable/ic_group_47694"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/publicationsbar" />
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>
