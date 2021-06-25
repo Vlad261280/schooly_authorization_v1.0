@@ -2,6 +2,7 @@ package com.egormoroz.schooly;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,16 +15,22 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.egormoroz.schooly.ui.main.EnterFragment;
 import com.egormoroz.schooly.ui.main.MainFragment;
 import com.egormoroz.schooly.ui.main.MessengerFragment;
 import com.egormoroz.schooly.ui.main.NontificationFragment;
+import com.egormoroz.schooly.ui.main.RegFragment;
+import com.egormoroz.schooly.ui.main.RegisrtationstartFragment;
 import com.egormoroz.schooly.ui.news.NewsFragment;
 import com.egormoroz.schooly.ui.people.PeopleFragment;
 import com.egormoroz.schooly.ui.profile.ProfileFragment;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RegisrtationstartFragment.sendAuthData {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +70,12 @@ public class MainActivity extends AppCompatActivity {
 
         toolbarTitle.setText(getString(R.string.app_name));
         toolbarTitle.setTextColor(getColor(R.color.purple_300));
-        setCurrentFragment(MainFragment.newInstance());
-
+        ///////////Authorization block
+        if(IsEntered())
+             setCurrentFragment(MainFragment.newInstance());
+        else
+            RegistrationOrEnter();
+        ///////////
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
@@ -111,5 +122,27 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frame, fragment);
         ft.commit();
+    }
+    void RegistrationOrEnter(){
+        setCurrentFragment(RegisrtationstartFragment.newInstance());
+    }
+    boolean IsEntered(){
+        return false;
+    }
+
+    @Override
+    public void sendData(GoogleSignInOptions gso, GoogleSignInClient signInClient, FirebaseAuth authBase, String type) {
+       switch (type){
+           case "EnterFragment":
+               setCurrentFragment(EnterFragment.newInstance());
+               Log.d("####### ", String.valueOf((getSupportFragmentManager().findFragmentById(R.id.frame).getClass())));
+              // EnterFragment fr = (EnterFragment)getSupportFragmentManager().findFragmentById(R.id.frame);
+              // fr.getData(gso, signInClient, authBase);
+               break;
+           case "RegistrationFragment":
+               RegFragment frr = (RegFragment)getSupportFragmentManager().findFragmentById(R.id.frame);
+               frr.getData(gso, signInClient, authBase);
+               break;
+       }
     }
 }

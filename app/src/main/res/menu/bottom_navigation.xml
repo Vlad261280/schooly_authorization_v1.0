@@ -4,18 +4,18 @@
     <item
         android:id="@+id/bottom_nav_home"
         android:icon="@drawable/ic_home"
-        android:title="@string/title_home" />
+        android:title="TODO" />
     <item
         android:id="@+id/bottom_nav_news"
         android:icon="@drawable/ic_news"
-        android:title="@string/title_news" />
+        android:title="TODO" />
     <item
         android:id="@+id/bottom_nav_people"
         android:icon="@drawable/ic_messages"
-        android:title="@string/title_people"/>
+        android:title="TODO"/>
     <item
         android:id="@+id/bottom_nav_profile"
         android:icon="@drawable/ic_profile"
-        android:title="@string/title_profile"/>
+        android:title="TODO"/>
 
 </menu>
